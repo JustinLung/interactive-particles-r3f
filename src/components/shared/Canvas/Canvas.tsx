@@ -1,5 +1,5 @@
 //@ts-nocheck
-import { Backdrop, Box, Environment, Float, OrbitControls, Stage } from '@react-three/drei';
+import { Environment, Float, OrbitControls } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Suspense, useRef } from 'react';
 import { useMemo } from 'react';
@@ -32,12 +32,10 @@ const CanvasElements = () => {
       <color attach="background" args={['#000']} />
       <ambientLight />
 
-      <Float
-        speed={1} // Animation speed, defaults to 1
-        rotationIntensity={0.1} // XYZ rotation intensity, defaults to 1
-        floatIntensity={0.1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-        floatingRange={[0.8, 1]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
-      >
+      {/* Use a different preset */}
+      <Environment preset="night" background />
+
+      <Float speed={1} rotationIntensity={0.1} floatIntensity={0.1} floatingRange={[0.8, 1]}>
         <Particles />
       </Float>
 

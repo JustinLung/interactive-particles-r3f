@@ -30,7 +30,7 @@
     ]
   },
   "dependencies": {
-    "@react-three/drei": "^9.96.3",
+    "@react-three/drei": "^9.96.4",
     "@react-three/fiber": "^8.15.15",
     "dotenv": "^16.0.3",
     "eslint": "8.41.0",

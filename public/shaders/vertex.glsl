@@ -1,4 +1,3 @@
-export const vertexShader = `
 precision highp float;
 
 vec3 mod289(vec3 x) {
@@ -111,12 +110,3 @@ void main() {
   gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.6);
   gl_PointSize = 2.0;
 }
-  `;
-
-export const fragmentShader = `
-  void main() {
-    float alpha = 1.0 - smoothstep(10.0, 0.4005, length(gl_PointCoord - vec2(5.5)));
-  
-    gl_FragColor = vec4(1.0, 1.0, 0.8, alpha);
-  }
-  `;
