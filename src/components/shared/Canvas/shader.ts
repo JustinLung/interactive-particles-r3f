@@ -97,8 +97,8 @@ float snoise(vec3 v)
 uniform float uTime;
 
 void main() {
-  float amp = 1.;
-  float freq = 1.100;
+  float amp = 1.5;
+  float freq = 1.200;
   float time = uTime * 0.008;
 
   float noiseValueX = snoise(-position * freq + time) * amp;
@@ -109,7 +109,7 @@ void main() {
   vec3 pos = vec3(position.x + noiseValueX, position.y + noiseValueY, position.z + noiseValueZ);
 
   gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.6);
-  gl_PointSize = 2.0;
+  gl_PointSize = 2.5;
 }
   `;
 

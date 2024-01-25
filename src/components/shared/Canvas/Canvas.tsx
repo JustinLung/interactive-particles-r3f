@@ -39,7 +39,7 @@ const CanvasElements = () => {
         <Particles />
       </Float>
 
-      <OrbitControls minPolarAngle={0} maxPolarAngle={Math.PI / 1.9} makeDefault />
+      <OrbitControls enableDamping minPolarAngle={0} maxPolarAngle={Math.PI / 1.9} makeDefault />
     </Suspense>
   );
 };
