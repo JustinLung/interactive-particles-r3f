@@ -90,7 +90,7 @@ float snoise(vec3 v)
   vec4 m = max(0.5 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
   m = m * m;
   return 105.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1), 
-                                dot(p2,x2), dot(p3,x3) ) );
+  dot(p2,x2), dot(p3,x3) ) );
 }
 
 
@@ -98,7 +98,7 @@ uniform float uTime;
 
 void main() {
   float amp = 1.5;
-  float freq = 1.200;
+  float freq = 100.0;
   float time = uTime * 0.008;
 
   float noiseValueX = snoise(-position * freq + time) * amp;
@@ -115,7 +115,7 @@ void main() {
 
 export const fragmentShader = `
   void main() {
-    float alpha = 1.0 - smoothstep(10.0, 0.4005, length(gl_PointCoord - vec2(5.5)));
+    float alpha = 1.2 - smoothstep(10.0, 0.4005, length(gl_PointCoord - vec2(5.5)));
   
     gl_FragColor = vec4(1.0, 1.0, 0.8, alpha);
   }
