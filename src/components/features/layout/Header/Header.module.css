@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  padding: 5px 12px;
+
+  .logo {
+    max-width: 2rem;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+}
