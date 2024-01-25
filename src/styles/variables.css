@@ -1,0 +1,16 @@
+:root {
+  --primary: #ffa61e;
+  --secondary: #141414;
+  --white: #ffffff;
+
+  --header-height: 64px;
+  --svh: 1svh;
+  --dvh: 1vh;
+  --lvh: 1lvh;
+
+  --100svh: calc(100 * var(--svh));
+
+  @media (--md) {
+    --header-height: 104px;
+  }
+}
