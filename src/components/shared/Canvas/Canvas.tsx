@@ -41,16 +41,6 @@ const CanvasElements = () => {
         <Particles />
       </Float>
 
-      <rectAreaLight
-        args={['white', 15]}
-        width={5}
-        height={5}
-        position={[0, 3, 1]}
-        // @ts-ignore
-        target={[0, 0, 0]}
-        visible={true}
-      />
-
       <OrbitControls minPolarAngle={0} maxPolarAngle={Math.PI / 1.9} makeDefault />
     </Suspense>
   );
